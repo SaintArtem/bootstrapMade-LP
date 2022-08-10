@@ -1,0 +1,762 @@
+/* Specification */
+
+@font-face {
+   font-family: 'Gill Sans MT';
+   src: url('../fonts/GIL____.eot');
+   /*IE9 */
+   src: url('../fonts/GIL____.eot?#iefix') format('embedded-onetype'),
+      /*IE6 - IE8*/
+      url('../fonts/GIL____.woff2') format('woff2'),
+      /*Super Modern Browsers*/
+      url('../fonts/GIL____.woff') format('woff'),
+      /*Pretty Modern Browsers*/
+      url('../fonts/GIL____.ttf') format('truetype'),
+      /*Safari, Android, IOS */
+      url('../fonts/GIL____.svg#svgFontName') format('svg');
+   /*Legacy IOS */
+   font-weight: normal;
+}
+
+@font-face {
+   font-family: 'Gill Sans MT';
+   src: url('../fonts/GILB____.eot');
+   /*IE9 Compat Modes */
+   src: url('../fonts/GILB____.eot?#iefix') format('embedded-onetype'),
+      /*IE6 - IE8*/
+      url('../fonts/GILB____.woff2') format('woff2'),
+      /*Super Modern Browsers*/
+      url('../fonts/GILB____.woff') format('woff'),
+      /*Pretty Modern Browsers*/
+      url('../fonts/GILB____.ttf') format('truetype'),
+      /*Safari, Android, IOS */
+      url('../fonts/GILB____.svg#svgFontName') format('svg');
+   /*Legacy IOS */
+   font-weight: bold;
+}
+
+body {
+   color: #8c8f94;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: bold;
+   color: #26272d;
+}
+
+h2 {
+   font-size: 38px;
+}
+
+ul,
+li {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+button {
+   background: transparent;
+   border: none;
+}
+
+a {
+   display: block;
+   text-decoration: none;
+   transition: all 0.5s ease;
+}
+
+.btn {
+   border-radius: 100px;
+   background: transparent;
+   transition: all 0.5s ease;
+}
+
+.link {
+   color: #26272d;
+   transition: all 0.3s ease;
+}
+
+.btn_blue {
+   color: #fff;
+   background: #267df4;
+}
+
+.btn_transparent {
+   color: #26272d;
+   border: 1px solid transparent;
+}
+
+.btn_blue:hover {
+   color: #fff;
+   transition: all 0.5s ease;
+   background: #267df4;
+   box-shadow: 0px 0px 15px -1px rgba(38, 125, 244, 0.45);
+}
+
+.btn_transparent:hover {
+   color: #26272d;
+   transition: all 0.5s ease;
+   background: transparent;
+   border: 1px solid #26272d;
+}
+
+.btn_blue:active {
+   transition: all 0.5s ease;
+   box-shadow: none;
+}
+
+.btn_transparent:active {
+   transition: all 0.5s ease;
+}
+
+.link:hover {
+   color: #9aa1af;
+}
+
+.lock {
+   overflow: hidden;
+}
+
+/* preloader */
+.preloader {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   z-index: 15;
+   background: rgb(196, 241, 255);
+   visibility: visible;
+   opacity: 1;
+}
+
+.preloader.done {
+   transition: 1.5s ease;
+   visibility: hidden;
+   opacity: 0;
+}
+
+.preloader-row {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -70%);
+
+}
+
+.preloader__item {
+   background: url('../img/preloader.jpg') no-repeat center center;
+   border: 1px solid #C8C8C8;
+   box-shadow: 0px 5px 30px 7px rgba(0, 0, 0, 0.08);
+   border-radius: 18px;
+   width: 253px;
+   height: 424px;
+}
+
+.preloader-content {
+   position: relative;
+   top: 30px;
+   margin: 0 auto;
+   align-items: center;
+   width: 238px;
+}
+
+.preloader-icon {
+   background: url('../img/inst.svg') no-repeat center center;
+   width: 55px;
+   height: 55px;
+}
+
+.preloader-text {
+   font-size: 25px;
+   color: #fff;
+}
+
+.bullets {
+   position: relative;
+   top: 50px;
+   max-width: 50px;
+   height: 15px;
+   align-items: center;
+   margin: 0 auto;
+}
+
+.bullet {
+   position: relative;
+   background: #fff;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   animation: bullet-bounce 0.6s ease infinite;
+}
+
+.bullet:nth-of-type(2) {
+   animation-delay: 0.15s;
+}
+
+.bullet:last-of-type {
+   animation-delay: 0.3s;
+}
+
+@keyframes bullet-bounce {
+
+   0%,
+   50% {
+      bottom: 1px;
+   }
+
+   100% {
+      top: 1px;
+   }
+}
+
+
+/* Header */
+
+header {
+   padding-top: 57px;
+   background: url('../img/header/bg-nature.png') no-repeat center top / cover;
+}
+
+.logo {
+   background: url('../img/header/logo.png');
+   width: 133px;
+   height: 15px;
+   margin: 0 auto;
+}
+
+.menu {
+   align-items: center;
+}
+
+.menu__item:not(:last-of-type) {
+   margin-right: 45px;
+}
+
+.menu__link {
+   font-size: 16px;
+}
+
+.contact-block {
+   width: fit-content;
+   margin: 0 0 0 auto;
+}
+
+.contact-us {
+   align-items: center;
+
+}
+
+.contact-us__item:not(:first-of-type) {
+   margin-left: 45px;
+}
+
+.download-btn {
+   margin-left: 30px;
+   padding: 9px 25px 9px 18px;
+   width: 132px;
+}
+
+.download-btn::before {
+   content: '';
+   display: block;
+   background: url('../img/header/apple-icon.svg');
+   width: 16px;
+   height: 20px;
+}
+
+.offer {
+   max-width: 740px;
+   text-align: center;
+   margin: 0 auto;
+   margin-top: 133px;
+   margin-bottom: 70px;
+}
+
+.offer__title {
+   font-weight: bold;
+   font-size: 53px;
+}
+
+.offer__btn {
+   width: 190px;
+   padding: 10px 35px 12px 35px;
+}
+
+.offer__btn::before {
+   content: '';
+   display: block;
+   background: url('../img/header/play-icon.svg');
+   width: 10px;
+   height: 10px;
+}
+
+.app-screen {
+   background: url('../img/header/bg-phone.png') no-repeat;
+   width: 450px;
+   height: 451px;
+}
+
+/* Section 'info' */
+
+.information {
+   padding: 120px 0 50px;
+}
+
+.icon-lock {
+   margin-bottom: 42px;
+   background: url('../img/info/lock-icon.png');
+   width: 42px;
+   height: 50px;
+}
+
+.icon-clock {
+   margin-bottom: 45px;
+   background: url('../img/info/clock-icon.png');
+   width: 41px;
+   height: 47px;
+}
+
+.title-information {
+   font-weight: bold;
+   font-size: 26px;
+   margin-bottom: 40px;
+}
+
+.text-information {
+   max-width: 505px;
+   font-size: 15px;
+}
+
+.text-information:first-of-type {
+   margin-bottom: 32px;
+}
+
+/* Section 'about' */
+.about {
+   padding: 60px 0;
+}
+
+.iphone6 {
+   margin-left: -150px;
+   background: url('../img/about/iphone6.png') no-repeat;
+   width: 745px;
+   height: 654px;
+}
+
+.text-block {
+   max-width: 460px;
+}
+
+.title-about {
+   margin-bottom: 60px;
+}
+
+.text-about:first-of-type {
+   margin-bottom: 30px;
+}
+
+.text-about:last-of-type {
+   max-width: 415px;
+   margin-bottom: 80px;
+}
+
+.btn-about {
+   padding-top: 7px;
+   padding-bottom: 7px;
+   text-align: center;
+}
+
+.btn-about_long {
+   width: 205px;
+   padding-left: 25px;
+   padding-right: 25px;
+   margin-right: 25px;
+}
+
+.btn-about_long::after {
+   content: '';
+   display: block;
+   background: url(../img/about/arrow-icon.png);
+   width: 13px;
+   height: 12px;
+   transition: all 0.5s ease;
+}
+
+.btn-about_short {
+   width: 140px;
+}
+
+.btn-about_long:hover {
+   padding-right: 18px;
+   transition: all 0.5s ease;
+}
+
+.btn-about_long::after:hover {
+   transition: all 0.5s ease;
+}
+
+/* Section 'location' */
+.location {
+   padding-top: 30px;
+   padding-bottom: 190px;
+}
+
+.title-location {
+   max-width: 270px;
+   margin-bottom: 72px;
+}
+
+.location-text {
+   max-width: 450px;
+}
+
+.location-text:first-of-type {
+   margin-bottom: 45px;
+}
+
+.location-text:nth-of-type(2) {
+   margin-bottom: 70px;
+}
+
+.map {
+   background: url('../img/location/world-map.png') no-repeat;
+   max-width: 627px;
+   height: 401px;
+}
+
+.small-title {
+   display: block;
+   text-transform: uppercase;
+   font-weight: bold;
+   font-size: 14px;
+   color: #000;
+   margin-bottom: 25px;
+}
+
+.partners__list {
+   padding: 0 !important;
+}
+
+.partners__item {
+   display: block;
+}
+
+.partners__link_first {
+   background: url('../img/location/dropbox-logo.png');
+   width: 125px;
+   height: 34px;
+   margin-right: 30px;
+}
+
+.partners__link_second {
+   background: url('../img/location/evernote-logo.png');
+   width: 138px;
+   height: 35px;
+}
+
+
+/* Footer */
+
+.footer {
+   padding-top: 30px;
+   padding-bottom: 200px;
+   font-size: 14px;
+}
+
+.logo-footer {
+   background: url('../img/header/logo.png');
+   width: 133px;
+   height: 15px;
+}
+
+.footer-text__item {
+   max-width: 260px;
+   margin: 30px 0;
+}
+
+.list-footer {
+   padding: 0 !important;
+}
+
+.list-footer__link {
+   color: #8c8f94;
+}
+
+.list-footer__item:not(:last-of-type) {
+   margin-bottom: 17px;
+}
+
+.apple-store-btn {
+   display: block;
+   background: #000;
+   border-radius: 5px;
+   padding: 0 17px 0 8px;
+   width: 140px;
+   height: 42px;
+   line-height: 1em;
+}
+
+.apple-store-btn::before {
+   content: '';
+   display: block;
+   background: url('../img/header/apple-icon.svg');
+   width: 16px;
+   height: 20px;
+}
+
+.apple-store-btn__text {
+   color: #fff;
+   font-size: 10px;
+}
+
+.apple-store-btn__text_big {
+   font-size: 18px;
+   font-weight: bold;
+}
+
+.list-footer__link:hover {
+   padding-left: 6px;
+}
+
+/* Go to Top */
+.go-to-top-wrapper {
+   transition: 0.5s ease;
+   position: fixed;
+   z-index: 3;
+   bottom: 110px;
+   right: 90px;
+   opacity: 0;
+   visibility: hidden;
+}
+
+.go-to-top {
+   transition: all 0.5s ease;
+   background: #d1d1d1af url('../img/up.svg') no-repeat center center;
+   width: 52px;
+   height: 52px;
+   border-radius: 50%;
+}
+
+.go-to-top:hover {
+   transition: all 0.5s ease;
+   background: #7c7c7c url('../img/up.svg') no-repeat center center;
+}
+
+.go-to-top-wrapper.visible {
+   transition: 0.5s ease;
+   opacity: 1;
+   visibility: visible;
+}
+
+/* Responsible */
+
+@media screen and (max-width: 1199px) {
+   .iphone6 {
+      width: 500px;
+      height: 435px;
+      margin-left: 0;
+      background-size: 500px;
+   }
+}
+
+@media screen and (max-width: 991px) {
+   .overlay {
+      position: absolute;
+      z-index: 2;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      border-radius: 0px 15px 15px 0;
+   }
+
+   .title-location {
+      text-align: center;
+      max-width: 100%;
+      margin-bottom: 72px;
+   }
+
+   .location-text {
+      max-width: 100%;
+   }
+
+   .burger-elem::after {
+      position: absolute;
+      top: 23px;
+      right: 5px;
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #000;
+   }
+
+   .burger-elem::before {
+      position: absolute;
+      top: 11px;
+      right: 5px;
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #000;
+   }
+
+   .burger-elem {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #000;
+   }
+
+   .burger {
+      position: fixed;
+      top: 25px;
+      left: 25px;
+      z-index: 10px;
+      transition: 0.5s ease;
+      border-radius: 50%;
+      background: rgb(248, 248, 248);
+      /* box-shadow: 0px 0px 12px rgba(122, 122, 122, 0.479); */
+      width: 35px;
+      height: 35px;
+   }
+
+   .burger:active {
+      transition: 0.5s ease;
+      box-shadow: none;
+   }
+
+   .mobile-menu {
+      transition: all 0.5s ease;
+      position: fixed;
+      top: 70px;
+      left: 0px;
+      padding: 15px;
+      background: #fff;
+      border: 1px solid rgb(121, 119, 119);
+      box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.21);
+      border-radius: 0px 15px 15px 0;
+      visibility: hidden;
+      opacity: 0;
+   }
+
+   .mobile-menu__link {
+      position: relative;
+      z-index: 3;
+      font-size: 16px;
+   }
+
+   .mobile-menu.active {
+      transition: all 0.5s ease;
+      visibility: visible;
+      opacity: 1;
+   }
+
+   .download-btn {
+      margin: 0;
+   }
+
+   .title-information_first {
+      max-width: 150px;
+   }
+
+   .text-block {
+      margin: 0 auto;
+   }
+
+   .map {
+      background-size: 500px;
+      margin: 0 auto 40px;
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .title-information_first {
+      max-width: 100%;
+   }
+
+   .text-information:last-child {
+      margin-bottom: 45px;
+   }
+
+   .list-footer:first-of-type {
+      margin-bottom: 60px;
+   }
+}
+
+@media screen and (max-width:575px) {
+   .preloader__item {
+      display: none;
+   }
+
+   header {
+      color: #000;
+   }
+
+   .offer__title {
+      font-size: 45px;
+   }
+
+   .logo {
+      margin: 0 auto;
+   }
+
+   .app-screen {
+      display: none;
+   }
+
+   .iphone6 {
+      background-size: 350px;
+      width: 350px;
+      height: 310px;
+   }
+
+   .title-location {
+      max-width: 260px;
+   }
+
+   .map {
+      background-size: 400px;
+   }
+
+   .download-btn {
+      margin-top: 30px;
+   }
+
+   .go-to-top-wrapper {
+      bottom: 80px;
+      right: 40px;
+   }
+}
+
+@media screen and (max-width: 380px) {
+   .iphone6 {
+      background-size: 215px;
+      width: 250px;
+      height: 240px;
+   }
+
+   .title-information {
+      font-size: 22px;
+   }
+
+   .title-location,
+   .title-about {
+      font-size: 33px;
+   }
+
+   .partners__item:first-of-type {
+      margin-bottom: 30px;
+   }
+
+   .apple-store-btn {
+      margin-bottom: 25px;
+   }
+}
